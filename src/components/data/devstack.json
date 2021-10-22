@@ -1,0 +1,48 @@
+{
+  "groups": [
+    {
+      "group": "Languages",
+      "items": [
+        "C#",
+        "Javascript",
+        "Python",
+        "XAML",
+        "(S)CSS",
+        "HTML",
+        "JSON",
+        "SQL"
+      ]
+    },
+    {
+      "group": "Frameworks/Paradigms",
+      "items": [
+        "WPF",
+        ".NET Framework/Core",
+        "MVVM",
+        "Unity",
+        "React",
+        "Node.js",
+        "Bootstrap",
+        "Silverlight",
+        "JQuery"
+      ]
+    },
+    {
+      "group": "Dev Tools",
+      "items": [
+        "Visual Studio",
+        "VSCode",
+        "Git",
+        "Jenkins",
+        "Jira",
+        "Eclipse",
+        "Confluence"
+      ]
+    }
+  ],
+  "associations": {
+    "C#": ["WPF", "MVVM", "Unity", ".NET Framework/Core", "Silverlight"],
+    "XAML": ["WPF", "Silverlight"],
+    "Javascript": ["React", "Node.js", "Bootstrap", "Jquery"]
+  }
+}

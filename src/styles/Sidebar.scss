@@ -1,0 +1,36 @@
+@import './colors.scss';
+
+.me {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3 {
+    margin-top: 15px;
+    font-weight: 300;
+  }
+
+  h4 {
+    font-weight: 400;
+  }
+
+  .avatar {
+    margin-top: 20px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: 0 20%;
+    border-radius: 50%;
+  }
+
+  .contact {
+    text-align: left;
+    margin: 10px 0;
+    ul {
+      font-size: 12px;
+      list-style-type: none;
+    }
+  }
+}

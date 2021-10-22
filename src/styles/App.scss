@@ -1,0 +1,50 @@
+@import './colors.scss';
+@font-face {
+  font-family: Roboto;
+  src: url('../fonts/RobotoMono-VariableFont_wght.ttf'),
+    url('../fonts/RobotoMono-Italic-VariableFont_wght.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: $background-base;
+  font-family: 'Roboto';
+  color: $font-base;
+}
+
+#root {
+  display: flex;
+  margin: auto;
+  justify-content: space-around;
+  max-width: 85vw;
+  width: 1000px;
+  box-shadow: 0 0 20px $background-darkest;
+}
+
+.divider {
+  min-width: 1px;
+  background: $separator;
+}
+
+hr {
+  border: none;
+  background: $separator;
+  height: 1px;
+  margin: 10px;
+}
+
+.sidebar {
+  background: $background-darkest;
+  flex-grow: 1;
+  position: sticky;
+  top: 0px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-width: 220px;
+  height: 100vh;
+}

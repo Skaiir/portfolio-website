@@ -1,0 +1,67 @@
+@import './colors.scss';
+
+.content {
+  font-weight: 300;
+  padding: 10px;
+  background: $background-darker;
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+
+  hr {
+    margin: 40px 50px;
+  }
+
+  h3 {
+    color: $font-highlighter;
+    font-weight: 400;
+  }
+
+  h4 {
+    color: $font-highlight;
+    font-weight: 300;
+  }
+}
+
+.intro {
+  p {
+    margin: 20px 0;
+    font-size: small;
+
+    &.nomarg {
+      margin: 0 0;
+    }
+  }
+
+  strong {
+    color: $font-highlighter;
+
+    &.mild {
+      color: $font-highlight;
+    }
+
+    &.warning {
+      color: $font-warning;
+    }
+
+    &.shiny {
+      text-shadow: 0 0 4px $font-highlight-shine;
+    }
+  }
+}
+
+.stack-cols {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.stack {
+  ul {
+    list-style-type: none;
+  }
+
+  .shiny {
+    font-weight: 500;
+  }
+}
