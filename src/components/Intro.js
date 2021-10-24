@@ -35,6 +35,12 @@ const Intro = () => {
         already apparent 😁. <br /> But one thing is for certain: <br /> <br />
         <strong> I'll make your designs come to life</strong>.
       </p>
+      <br />
+      <p>
+        <strong className='warning'>
+          This website is under construction...
+        </strong>
+      </p>
     </div>
   )
 }

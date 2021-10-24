@@ -17,7 +17,7 @@ const Sidebar = () => {
             </li>
             <li>
               {mailIcon}
-              <span>serval.core@gmail.com</span>
+              <span>serval.business@gmail.com</span>
             </li>
             <li>
               {linkedInIcon}
