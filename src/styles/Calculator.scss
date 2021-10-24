@@ -1,0 +1,71 @@
+@import 'colors.scss';
+
+.calculator-root {
+  display: flex;
+  padding: 30px 10px;
+}
+
+.calculator-history {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 8px;
+  padding-right: 20px;
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 5px;
+    margin: 0 10px;
+    border-radius: 3px;
+    color: $font-darker;
+
+    &:nth-child(even) {
+      background-color: $background-darker;
+    }
+
+    span:hover {
+      color: $font-base;
+      font-weight: 500;
+    }
+  }
+
+  .result {
+    text-align: right;
+    padding-left: 10px;
+  }
+}
+
+.calculator-display {
+  grid-column: span 4;
+  background-color: black;
+  border-radius: 5px;
+  text-align: right;
+  text-overflow: clip;
+  font-size: 2em;
+}
+
+.calculator {
+  display: grid;
+  grid-template-columns: 70px 70px 70px 70px;
+  grid-template-rows: 40px 40px 40px 40px 40px 40px;
+  gap: 10px 10px;
+}
+
+.calculator-button {
+  border: none;
+  border-radius: 5px;
+  background-color: $background-base;
+  color: $font-base;
+  font-weight: 600;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: $background-lighterer;
+  }
+}
+
+.highlight {
+  background-color: $background-lighter;
+}

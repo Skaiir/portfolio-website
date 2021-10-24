@@ -1,0 +1,56 @@
+@import 'colors.scss';
+
+.projects-display {
+  border-radius: 5px;
+  margin: 10px 0;
+  background-color: $background-dusk;
+  min-height: 400px;
+  overflow: hidden;
+  box-shadow: 0 0 5px $background-darkest;
+}
+
+.projects-nav {
+  background-color: $background-darkest;
+  display: flex;
+}
+
+.projects-nav-item {
+  padding: 5px;
+  transition: background-color 0.2s;
+}
+
+.nav-selected {
+  font-weight: 500;
+  background-color: $background-dusk;
+}
+
+.project-description {
+  padding: 20px 5px;
+
+  .tech-list {
+    display: flex;
+    align-items: center;
+
+    div {
+      background-color: $background-lighter;
+      min-width: 50px;
+      height: 20px;
+      font-size: small;
+      text-align: center;
+      border-radius: 11px;
+      margin: 5px;
+      padding: 0 5px;
+    }
+  }
+
+  h5 {
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
+
+  .discussion {
+    margin-top: 20px;
+    font-size: small;
+    color: $font-darker;
+  }
+}

@@ -10,6 +10,10 @@
 
   hr {
     margin: 40px 50px;
+    &.project-hr {
+      margin: 10px 0px;
+      background-color: $background-base;
+    }
   }
 
   h3 {
@@ -58,10 +62,21 @@
 
 .stack {
   ul {
-    list-style-type: none;
+    list-style: none;
   }
 
-  .shiny {
-    font-weight: 500;
+  li {
+    margin-top: 5px;
+    padding: 0 5px;
+    border-radius: 5px;
+    transition: all 0.3s;
+  }
+
+  .underline {
+    background-color: $background-base;
+  }
+
+  .highlight-skill {
+    background-color: $background-lighter;
   }
 }

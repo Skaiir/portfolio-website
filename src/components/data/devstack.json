@@ -43,6 +43,6 @@
   "associations": {
     "C#": ["WPF", "MVVM", "Unity", ".NET Framework/Core", "Silverlight"],
     "XAML": ["WPF", "Silverlight"],
-    "Javascript": ["React", "Node.js", "Bootstrap", "Jquery"]
+    "Javascript": ["React", "Node.js", "Bootstrap", "JQuery"]
   }
 }

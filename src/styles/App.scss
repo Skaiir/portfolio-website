@@ -36,15 +36,3 @@ hr {
   height: 1px;
   margin: 10px;
 }
-
-.sidebar {
-  background: $background-darkest;
-  flex-grow: 1;
-  position: sticky;
-  top: 0px;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  min-width: 220px;
-  height: 100vh;
-}
