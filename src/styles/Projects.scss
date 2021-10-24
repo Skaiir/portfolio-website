@@ -17,11 +17,18 @@
 .projects-nav-item {
   padding: 5px;
   transition: background-color 0.2s;
+
+  &:not(:first-child) {
+    border-width: 0;
+    border-left: 1px;
+    border-color: $background-dusk;
+    border-style: solid;
+  }
 }
 
 .nav-selected {
   font-weight: 500;
-  background-color: $background-dusk;
+  background-color: $background-dusk !important;
 }
 
 .project-description {

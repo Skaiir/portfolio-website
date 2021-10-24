@@ -1,11 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { projects, mapProject } from './Projects/projectMappings'
 import '../styles/Projects.scss'
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(projects[0])
+  const projectsRootRef = useRef()
+
+  useEffect(() => {
+    projectsRootRef.current.scrollIntoView()
+  }, [selectedProject])
+
   return (
-    <div className='projects'>
+    <div ref={projectsRootRef} className='projects'>
       <h3>My Projects</h3>
       <div className='projects-display'>
         <ProjectsNav
