@@ -1,6 +1,5 @@
 import '../styles/Content.scss'
 import Intro from './Intro'
-import RopeCanvas from './RopeCanvas'
 import Stack from './Stack'
 import Projects from './Projects'
 
@@ -8,12 +7,18 @@ const Content = () => {
   return (
     <>
       <Intro />
-      <RopeCanvas canvasHeight={'100px'} ropeThickness={3} />
+      <ContentHr />
       <Stack />
-      <RopeCanvas canvasHeight={'100px'} ropeThickness={3} />
+      <ContentHr />
       <Projects />
     </>
   )
 }
+
+const ContentHr = () => (
+  <div className='pill-tail'>
+    <hr className='pill' />
+  </div>
+)
 
 export default Content

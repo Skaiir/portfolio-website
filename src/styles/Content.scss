@@ -16,6 +16,22 @@
     }
   }
 
+  div.pill-tail {
+    margin: 40px 10px;
+    background: $background-base;
+    height: 2px;
+    hr.pill {
+      margin: auto;
+      position: relative;
+      top: -1px;
+      height: 4px;
+      width: 40px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px black;
+      background: $font-highlight;
+    }
+  }
+
   h3 {
     color: $font-highlighter;
     font-weight: 400;

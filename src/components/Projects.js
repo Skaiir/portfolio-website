@@ -5,8 +5,14 @@ import '../styles/Projects.scss'
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(projects[0])
   const projectsRootRef = useRef()
+  const firstRender = useRef(true)
 
   useEffect(() => {
+    if (firstRender.current) {
+      firstRender.current = false
+      return
+    }
+
     projectsRootRef.current.scrollIntoView()
   }, [selectedProject])
 
