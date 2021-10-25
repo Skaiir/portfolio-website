@@ -1,6 +1,7 @@
 import '../styles/Sidebar.scss'
 
-import faceURL from './data/mug.jpg'
+import faceImg from './data/mug.jpg'
+import QuickNav from './QuickNav'
 
 const Sidebar = () => {
   return (
@@ -8,7 +9,7 @@ const Sidebar = () => {
       <div className='me'>
         <h3>Valentin Serra</h3>
         <h4>Software Developer</h4>
-        <img className='avatar' src={faceURL} alt='my face' />
+        <img className='avatar' src={faceImg} alt='my face' />
         <div className='contact'>
           <ul>
             <li>
@@ -35,11 +36,18 @@ const Sidebar = () => {
         </div>
       </div>
       <hr />
+      <QuickNav links={quickNavLinks} />
     </>
   )
 }
 
 export default Sidebar
+
+const quickNavLinks = [
+  { id: 'intro', text: 'Introduction' },
+  { id: 'stack', text: 'Tech Stack' },
+  { id: 'projects', text: 'Projects' },
+]
 
 const linkedInIcon = (
   <svg

@@ -17,7 +17,7 @@ const Projects = () => {
   }, [selectedProject])
 
   return (
-    <div ref={projectsRootRef} className='projects'>
+    <div id='projects' ref={projectsRootRef} className='projects'>
       <h3>My Projects</h3>
       <div className='projects-display'>
         <ProjectsNav

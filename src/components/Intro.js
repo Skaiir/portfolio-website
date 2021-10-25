@@ -2,7 +2,7 @@ import { yearsOfDev } from '../logic/helper'
 
 const Intro = () => {
   return (
-    <div className='intro'>
+    <div id='intro' className='intro'>
       <h3>Hi, I'm Valentin</h3>
       <p>
         I'm a dev, specialising in

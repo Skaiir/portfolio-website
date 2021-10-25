@@ -37,7 +37,7 @@ const Stack = () => {
   }, [])
 
   return (
-    <div ref={stackRef} className='stack-container'>
+    <div id='stack' ref={stackRef} className='stack-container'>
       <h3>Dev Stack</h3>
       <h4>Ordered by familiarity</h4>
       <div className='stack-cols'>
