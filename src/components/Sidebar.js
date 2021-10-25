@@ -2,6 +2,7 @@ import '../styles/Sidebar.scss'
 
 import faceImg from './data/mug.png'
 import QuickNav from './QuickNav'
+import Cookies from './Cookies'
 
 const Sidebar = () => {
   return (
@@ -37,6 +38,8 @@ const Sidebar = () => {
       </div>
       <hr />
       <QuickNav links={quickNavLinks} />
+      <hr />
+      <Cookies />
     </>
   )
 }

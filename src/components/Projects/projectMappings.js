@@ -12,8 +12,8 @@ const clockGameName = 'clock-game'
 export const projects = [calculatorName, clothSimName, thisName, clockGameName]
 
 export const mapProject = (project) => {
-  var proj = null
-  var info = null
+  let proj = null
+  let info = null
 
   if (project === calculatorName) {
     proj = <Calculator />

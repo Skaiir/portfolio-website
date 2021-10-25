@@ -40,7 +40,9 @@ const ClothSim = () => {
   return (
     <div className='cloth-simulation'>
       <div className='cloth-sim-controls'>
-        <h4>Don't go too crazy with the resolution ;)</h4>
+        <h4 style={{ fontSize: 'small' }}>
+          For the nicest results, keep the resolution between 10-20
+        </h4>
         <h5>x resolution</h5>
         <input
           type='number'

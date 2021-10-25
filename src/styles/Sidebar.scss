@@ -12,6 +12,24 @@
   height: 100vh;
   padding: 0 5px;
 
+  .cookie-notes-root {
+    padding-top: 20px;
+    text-align: center;
+  }
+
+  textarea.cookie-notes {
+    outline: none;
+    border: none;
+    resize: none;
+    height: 100px;
+    width: 220px;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    background: $background-lighter;
+    color: $font-highlight;
+  }
+
   hr {
     height: 4px;
     width: 40px;

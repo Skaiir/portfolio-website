@@ -8,7 +8,7 @@ const Stack = () => {
   const stackRef = useRef()
 
   useEffect(() => {
-    var lis_map = {}
+    let lis_map = {}
     for (const li of stackRef.current.getElementsByTagName('li')) {
       lis_map[li.innerHTML] = li
     }

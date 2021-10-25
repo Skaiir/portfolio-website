@@ -71,7 +71,7 @@ class PointNetwork {
 
     const offSet = Vector2.mul(Vector2.sub(end, start), 1 / (subDivisions + 1))
 
-    for (var x = 1; x <= subDivisions; x++) {
+    for (let x = 1; x <= subDivisions; x++) {
       const point = new Point(false, Vector2.add(start, Vector2.mul(offSet, x)))
       this.points.push(point)
     }
@@ -80,7 +80,7 @@ class PointNetwork {
 
     const dist = Vector2.dist(offSet)
 
-    for (var y = 0; y < this.points.length - 1; y++) {
+    for (let y = 0; y < this.points.length - 1; y++) {
       this.connections.push(
         new Connection(this.points[y], this.points[y + 1], dist)
       )
@@ -92,9 +92,9 @@ class PointNetwork {
     const diffy = (botright.y - topleft.y) / divy
     const points2D = []
 
-    for (var y = 0; y <= divy; y++) {
+    for (let y = 0; y <= divy; y++) {
       const points1D = []
-      for (var x = 0; x <= divx; x++) {
+      for (let x = 0; x <= divx; x++) {
         const newX = topleft.x + x * diffx
         const newY = topleft.y + y * diffy
         const isFixed = y === 0 && x % fixedfreq === 0
@@ -106,8 +106,8 @@ class PointNetwork {
       points2D.push(points1D)
     }
 
-    for (y = 0; y <= divy; y++) {
-      for (x = 0; x <= divx; x++) {
+    for (let y = 0; y <= divy; y++) {
+      for (let x = 0; x <= divx; x++) {
         if (x >= 1) {
           this.connections.push(
             new Connection(points2D[y][x - 1], points2D[y][x], diffx)
@@ -130,13 +130,13 @@ class PointNetwork {
 
   simulateStep() {
     this.simulateGravity()
-    for (var j = 0; j < kinematicsIterations; j++) {
+    for (let j = 0; j < kinematicsIterations; j++) {
       this.simulateKinematics()
     }
   }
 
   simulateGravity() {
-    for (var x = 0; x < this.points.length; x++) {
+    for (let x = 0; x < this.points.length; x++) {
       if (this.points[x].isFixed) {
         continue
       }
@@ -145,8 +145,8 @@ class PointNetwork {
       const timeStep = 0.01
       const prev_pos = point.currPos
 
-      var new_pos = Vector2.sub(Vector2.mul(point.currPos, 2), point.oldPos)
-      var gravity = Vector2.mul(
+      let new_pos = Vector2.sub(Vector2.mul(point.currPos, 2), point.oldPos)
+      let gravity = Vector2.mul(
         new Vector2(0, 1),
         gravityMultiplier * Math.pow(timeStep, 2)
       )
@@ -160,8 +160,8 @@ class PointNetwork {
 
   simulateKinematics() {
     this.connections.forEach((c) => {
-      var a = c.pointA
-      var b = c.pointB
+      const a = c.pointA
+      const b = c.pointB
 
       const center = Vector2.mul(Vector2.add(a.currPos, b.currPos), 0.5)
       const dir = Vector2.norm(b.currPos, a.currPos)

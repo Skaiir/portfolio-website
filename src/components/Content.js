@@ -11,6 +11,7 @@ const Content = () => {
       <Stack />
       <ContentHr />
       <Projects />
+      <ContentHr />
     </>
   )
 }
