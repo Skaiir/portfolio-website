@@ -1,6 +1,6 @@
 import '../styles/Sidebar.scss'
 
-import faceImg from './data/mug.jpg'
+import faceImg from './data/mug.png'
 import QuickNav from './QuickNav'
 
 const Sidebar = () => {
