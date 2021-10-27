@@ -8,10 +8,10 @@ const Content = () => {
     <>
       <Intro />
       <ContentHr />
-      <Stack />
-      <ContentHr />
       <Projects />
       <ContentHr />
+      <Stack />
+      <div style={{ marginBottom: '100px' }}></div>
     </>
   )
 }

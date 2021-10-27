@@ -1,6 +1,6 @@
 import '../styles/Sidebar.scss'
 
-import faceImg from './data/mug.png'
+import faceImg from './data/img/mug.png'
 import QuickNav from './QuickNav'
 import Cookies from './Cookies'
 
@@ -38,8 +38,8 @@ const Sidebar = () => {
       </div>
       <hr />
       <QuickNav links={quickNavLinks} />
-      <hr />
-      <Cookies />
+      {/* <hr /> */}
+      {/* <Cookies /> */}
     </>
   )
 }
@@ -48,8 +48,8 @@ export default Sidebar
 
 const quickNavLinks = [
   { id: 'intro', text: 'Introduction' },
-  { id: 'stack', text: 'Tech Stack' },
   { id: 'projects', text: 'Projects' },
+  { id: 'stack', text: 'Tech Stack' },
 ]
 
 const linkedInIcon = (

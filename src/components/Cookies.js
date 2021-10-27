@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
 
 const Cookies = () => {
-  const [cookie, setCookie] = useState(document.cookie.split('@@').join('/n'))
+  const [cookie, setCookie] = useState(document.cookie.split(';').join('/n'))
   useEffect(() => {
-    document.cookie = cookie.split('/n').join('@@')
+    document.cookie = cookie.split('/n').join(';')
   }, [cookie])
 
   return (

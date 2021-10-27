@@ -1,65 +1,75 @@
 import Calculator, { calculatorInfo } from './Calculator'
 import ClothSim, { clothInfo } from './ClothSim'
+import PublicChat from './PublicChat'
 import ProjectDescription from './ProjectDescription'
-import portfolioImg from '../data/portfolio.png'
-import clockGameImg from '../data/otc.jpg'
+import portfolioImg from '../data/img/portfolio.png'
+import rayTracerImg from '../data/img/ray-tracer.png'
+import clockGameImg from '../data/img/clock-game.jpg'
+import ImgDisplay from './ImgDisplay'
 
 const calculatorName = 'calculator'
 const clothSimName = 'cloth-sim'
 const thisName = 'this'
 const clockGameName = 'clock-game'
+const publicChatName = 'public-chat'
+const rayTracerName = 'ray-tracer'
 
-export const projects = [calculatorName, clothSimName, thisName, clockGameName]
+export const projects = [
+  clothSimName,
+  rayTracerName,
+  calculatorName,
+  thisName,
+  clockGameName,
+]
 
 export const mapProject = (project) => {
   let proj = null
   let info = null
 
-  if (project === calculatorName) {
-    proj = <Calculator />
-    info = calculatorInfo
-  } else if (project === clothSimName) {
-    proj = <ClothSim />
-    info = clothInfo
-  } else if (project === thisName) {
-    // TODO : REFACTOR THIS DUPE CODE
-    proj = (
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          padding: '10px',
-        }}
-      >
-        <img
-          style={{ maxWidth: '400px' }}
-          src={portfolioImg}
-          alt='this website'
+  switch (project) {
+    case calculatorName:
+      proj = <Calculator />
+      info = calculatorInfo
+      break
+
+    case clothSimName:
+      proj = <ClothSim />
+      info = clothInfo
+      break
+
+    case publicChatName:
+      proj = <PublicChat />
+      break
+
+    case thisName:
+      proj = <ImgDisplay img={portfolioImg} alt='this website' />
+      info = thisInfo
+      break
+
+    case clockGameName:
+      proj = (
+        <ImgDisplay
+          img={clockGameImg}
+          alt='clock game'
+          text='the playing field'
         />
-        <h4>I've seen this one somewhere...</h4>
-      </div>
-    )
-    info = thisInfo
-  } else if (project === clockGameName) {
-    proj = (
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          padding: '50px 10px',
-        }}
-      >
-        <img
-          style={{ maxWidth: '400px', borderRadius: '5px' }}
-          src={clockGameImg}
-          alt='this website'
+      )
+      info = clockGameInfo
+      break
+
+    case rayTracerName:
+      proj = (
+        <ImgDisplay
+          img={rayTracerImg}
+          alt='ray tracer'
+          text='when multiple nearly perfectly reflective surfaces touch'
         />
-        <h4>A clock and a gear?</h4>
-      </div>
-    )
-    info = clockGameInfo
+      )
+      info = rayTracerInfo
+      break
+
+    default:
+      alert('Project Unmapped')
   }
 
   return (
@@ -92,5 +102,19 @@ const clockGameInfo = {
   ],
   discussion:
     "This project was huge, and is still to be completed. As per pretty much any game project, this involved HEAVY use of OOP. Unity did do a lot of the heavy lifting for collisions and rendering, but I developed a lot of very specific logic for the puzzles we wanted to create. This is currently shelved due to scope issues, but I would love to get back to it one day. I can't show too much of it since the idea is for it to be released in the future.",
+  improvements: [],
+}
+
+const rayTracerInfo = {
+  name: 'Ray Tracing Engine',
+  tech: ['HLSL', 'Unity'],
+  features: [
+    'computes primitives such as spheres, planes, cubes',
+    'set basic material properties of primitives, such as colors, reflectivity, opacity',
+    'moving around the environment via unity data passed to the shader',
+    'anti-aliasing',
+  ],
+  discussion:
+    'I had a week where I became very interested in computer graphics programming. This project particularly blew my mind and involved a ton of research to get all the vector maths right. ',
   improvements: [],
 }

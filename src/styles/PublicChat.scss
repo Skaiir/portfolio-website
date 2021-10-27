@@ -1,0 +1,81 @@
+@import './colors.scss';
+
+.public-chat {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 0.7fr 0.3fr;
+  grid-template-rows: 300px auto;
+  margin: 5px;
+  border-radius: 5px;
+  overflow: hidden;
+  .chat {
+    background-color: $background-base;
+    display: flex;
+    flex-direction: column;
+    overflow-wrap: break-word;
+    overflow-x: hidden;
+    .user-message {
+      padding: 5px;
+      &:nth-child(even) {
+        background-color: $background-lighter;
+      }
+
+      .user {
+        padding-right: 10px;
+      }
+    }
+  }
+  .users {
+    background-color: $background-darkest;
+    overflow-y: auto;
+  }
+  .text-entry {
+    grid-column: 1 / span 2;
+    background-color: $background-darker;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 10px;
+
+    span {
+      text-shadow: 0 0 3px $font-highlight;
+    }
+
+    input {
+      flex-grow: 1;
+    }
+  }
+}
+
+.login-form {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    input[type='submit'] {
+      margin-top: 10px;
+      background-color: $background-base;
+      border: none;
+      border-radius: 5px;
+      padding: 8px;
+      color: $font-highlight;
+      font-family: inherit;
+      font-weight: 200;
+      font-size: large;
+      transition: background-color 0.2s, padding 0.2s, margin-top 0.2s;
+
+      &:hover {
+        margin-top: 9px;
+        padding: 10px;
+        font-weight: 400;
+        background-color: $background-lighter;
+      }
+    }
+  }
+}

@@ -48,6 +48,11 @@
     margin: 20px 0;
     font-size: small;
 
+    .shift {
+      margin: 5px 10px;
+      display: inline-block;
+    }
+
     &.nomarg {
       margin: 0 0;
     }
