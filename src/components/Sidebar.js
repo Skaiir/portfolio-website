@@ -2,7 +2,7 @@ import '../styles/Sidebar.scss'
 
 import faceImg from './data/img/mug.png'
 import QuickNav from './QuickNav'
-import Cookies from './Cookies'
+// import Cookies from './Cookies'
 
 const Sidebar = () => {
   return (
