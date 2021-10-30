@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 import devstack from './data/devstack.json'
+import TitledSection from './TitledSection'
 const groups = devstack.groups
 const associations = devstack.associations
 
@@ -37,10 +38,12 @@ const Stack = () => {
   }, [])
 
   return (
-    <div id='stack' ref={stackRef} className='stack-container'>
-      <h3>Dev Stack</h3>
-      <h4>Ordered by familiarity</h4>
-      <div className='stack-cols'>
+    <TitledSection
+      name='stack'
+      title='Dev Stack'
+      subtitle='Ordered by familiarity'
+    >
+      <div ref={stackRef} className='stack-cols'>
         {groups.map((group) => {
           return (
             <div className='stack'>
@@ -54,7 +57,7 @@ const Stack = () => {
           )
         })}
       </div>
-    </div>
+    </TitledSection>
   )
 }
 

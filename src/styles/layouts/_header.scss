@@ -1,0 +1,27 @@
+@use '../abstracts/colors' as *;
+
+.banner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  .banner-text {
+    margin-left: 20px;
+
+    h1 {
+      font-weight: 200;
+      color: $font-highlight;
+    }
+
+    h4 {
+      font-weight: 300;
+    }
+  }
+
+  img {
+    min-width: 200px;
+    height: 200px;
+    margin: 10px;
+    align-self: center;
+  }
+}

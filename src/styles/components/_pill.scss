@@ -1,0 +1,12 @@
+@use '../abstracts/colors' as *;
+
+.pill {
+  background-color: $background-lighter;
+  min-width: 50px;
+  height: 20px;
+  font-size: small;
+  text-align: center;
+  border-radius: 11px;
+  margin: 5px;
+  padding: 0 5px;
+}

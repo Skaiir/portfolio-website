@@ -1,6 +1,10 @@
-@import './colors.scss';
+@import '../abstracts/colors';
 
 .content {
+  @media screen and (max-width: 1000px) {
+    padding: 30px;
+  }
+
   font-weight: 300;
   padding: 10px;
   background: $background-darker;
@@ -43,7 +47,7 @@
   }
 }
 
-.intro {
+#intro {
   p {
     margin: 20px 0;
     font-size: small;

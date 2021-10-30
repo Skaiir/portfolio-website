@@ -8,10 +8,9 @@ const ProjectDescription = (props) => {
         <div className='tech-list'>
           <h6>tech:</h6>
           {info.tech.map((t) => (
-            <div className='tech'>{t}</div>
+            <div className='pill'>{t}</div>
           ))}
         </div>
-
         <h5>Features:</h5>
         <ul className='features-list'>
           {info.features.map((f) => (

@@ -1,18 +1,17 @@
-import '../styles/Content.scss'
-import Intro from './Intro'
-import Stack from './Stack'
-import Projects from './Projects'
+import IntroSection from '../IntroSection'
+import ProjectsSection from '../ProjectsSection'
+import StackSection from '../StackSection'
 
 const Content = () => {
   return (
-    <>
-      <Intro />
+    <div className='content'>
+      <IntroSection />
       <ContentHr />
-      <Projects />
+      <ProjectsSection />
       <ContentHr />
-      <Stack />
+      <StackSection />
       <div style={{ marginBottom: '100px' }}></div>
-    </>
+    </div>
   )
 }
 

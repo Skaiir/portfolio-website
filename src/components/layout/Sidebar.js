@@ -1,16 +1,17 @@
-import '../styles/Sidebar.scss'
-
-import faceImg from './data/img/mug.png'
-import QuickNav from './QuickNav'
-// import Cookies from './Cookies'
+import faceImg from '../data/img/mug.png'
+import QuickNav from '../QuickNav'
 
 const Sidebar = () => {
   return (
-    <>
+    <div className='sidebar'>
       <div className='me'>
         <h3>Valentin Serra</h3>
         <h4>Software Developer</h4>
-        <img className='avatar' src={faceImg} alt='my face' />
+        <img
+          className='avatar avatar--hover-shadow'
+          src={faceImg}
+          alt='my face'
+        />
         <div className='contact'>
           <ul>
             <li>
@@ -36,11 +37,12 @@ const Sidebar = () => {
           </ul>
         </div>
       </div>
+
       <hr />
       <QuickNav links={quickNavLinks} />
       {/* <hr /> */}
       {/* <Cookies /> */}
-    </>
+    </div>
   )
 }
 

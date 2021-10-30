@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from 'react'
-import '../../styles/PublicChat.scss'
 
 const PublicChat = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false)

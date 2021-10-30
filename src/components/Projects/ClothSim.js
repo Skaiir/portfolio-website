@@ -1,6 +1,5 @@
 import PointNetworkFactory, { Vector2 } from '../../logic/point_network.js'
 import { drawNetwork } from '../../logic/canvasNetworkDrawer.js'
-import '../../styles/Cloth.scss'
 import React, { useRef, useState, useEffect } from 'react'
 
 const ClothSim = () => {
@@ -38,8 +37,8 @@ const ClothSim = () => {
   }, [frame])
 
   return (
-    <div className='cloth-simulation'>
-      <div className='cloth-sim-controls'>
+    <div className='cloth-project'>
+      <div className='cloth-controls'>
         <h4 style={{ fontSize: 'small' }}>
           For the nicest results, keep the resolution between 10-20
         </h4>
@@ -63,16 +62,13 @@ const ClothSim = () => {
         />
         <br />
         <button
-          className='tear-button'
+          className='btn btn--bouncy'
           onClick={() => clothRef.current.tear(0.1)}
         >
-          TEAR
+          CHAOS++
         </button>
       </div>
-      <canvas
-        ref={canvasRef}
-        style={{ background: 'black', width: 300, height: 300 }}
-      />
+      <canvas ref={canvasRef} style={{ width: 300, height: 300 }} />
     </div>
   )
 }

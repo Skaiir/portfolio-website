@@ -1,10 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react'
-import { projects, mapProject } from './Projects/projectMappings'
-import '../styles/Projects.scss'
+import { projects, mapProject } from './projects/projectMappings'
+import TitledSection from './TitledSection'
+import { scrollToWithOffset } from '../logic/util/scrolling'
 
-const Projects = () => {
+const ProjectsSection = () => {
   const [selectedProject, setSelectedProject] = useState(projects[0])
-  const projectsRootRef = useRef()
   const firstRender = useRef(true)
 
   useEffect(() => {
@@ -13,12 +13,11 @@ const Projects = () => {
       return
     }
 
-    projectsRootRef.current.scrollIntoView()
+    scrollToWithOffset('projects', -10)
   }, [selectedProject])
 
   return (
-    <div id='projects' ref={projectsRootRef} className='projects'>
-      <h3>My Projects</h3>
+    <TitledSection name='projects' title='Some Projects'>
       <div className='projects-display'>
         <ProjectsNav
           selectedProject={selectedProject}
@@ -26,7 +25,7 @@ const Projects = () => {
         />
         {mapProject(selectedProject)}
       </div>
-    </div>
+    </TitledSection>
   )
 }
 
@@ -49,4 +48,4 @@ const ProjectsNav = (props) => {
 const buildNavItemClassName = (isSelected) =>
   isSelected ? 'projects-nav-item nav-selected' : 'projects-nav-item'
 
-export default Projects
+export default ProjectsSection

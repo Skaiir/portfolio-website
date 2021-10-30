@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import '../../styles/Calculator.scss'
 import { evaluate } from 'mathjs'
 import { readablePrecision } from '../../logic/helper'
 

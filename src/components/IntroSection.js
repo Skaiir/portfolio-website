@@ -1,53 +1,50 @@
 import { yearsOfCode, yearsOfDev } from '../logic/helper'
+import TitledSection from './TitledSection'
 
-const Intro = () => {
-  return (
-    <div id='intro' className='intro'>
-      <h3>Hello Worlds</h3>
-      <p>
-        Professionally, I'm a <strong className='shiny'>Front-End</strong>{' '}
-        software developer.
+const Intro = () => (
+  <TitledSection name='intro' title='Hello Worlds'>
+    <p>
+      Professionally, I'm a <strong className='shiny'>Front-End</strong>{' '}
+      software developer.
+      <br />
+      So far, I've been in the industry for{' '}
+      <strong className='shiny'>{yearsOfDev()}</strong> years.
+      <br />
+      I've been seriously invested in coding for{' '}
+      <strong className='shiny'>{yearsOfCode()}</strong>.
+    </p>
+    <p>
+      {code} <br />
+      <span class='shift'>
+        My coding interest started early on as a teen when I decided to build a
+        forum using a website builder and discovered the ability to embed
+        <strong className='shiny'> Javascript</strong>. I learned to make my
+        forum snow during winter, and ever since I've been facinated by
+        programming.
         <br />
-        So far, I've been in the industry for{' '}
-        <strong className='shiny'>{yearsOfDev()}</strong> years.
         <br />
-        I've been seriously invested in coding for{' '}
-        <strong className='shiny'>{yearsOfCode()}</strong>.
-      </p>
-      <p>
-        {code} <br />
-        <span class='shift'>
-          My coding interest started early on as a teen when I decided to build
-          a forum using a website builder and discovered the ability to embed
-          <strong className='shiny'> Javascript</strong>. I learned to make my
-          forum snow during winter, and ever since I've been facinated by
-          programming.
-          <br />
-          <br />
-          There is no feeling that can quite capture the satisfaction of working
-          on a challenging problem hour after hour, experiencing bugs, false
-          hope and eventually getting everything to line up perfectly.
-          <br />
-          <br />
-          That feeling is pretty much the reason why I've made coding my career.
-        </span>
-      </p>
-      <p>
-        {rocket} <br />
-        <span class='shift'>
-          In my free time, I am continuously exploring areas of programming
-          which are unknown to me. I've played around with neural networks,
-          computer graphics, data visualisations, physics simulations,
-          procedural art, web dev, native windows applications, and networking
-          to mention a few.
-          <br />
-          <br />
-          Coding is fun, coding something new even more so.
-        </span>
-      </p>
-    </div>
-  )
-}
+        There is no feeling that can quite capture the satisfaction of working
+        on a challenging problem hour after hour, experiencing bugs, false hope
+        and eventually getting everything to line up perfectly.
+        <br />
+        <br />
+        That feeling is pretty much the reason why I've made coding my career.
+      </span>
+    </p>
+    <p>
+      {rocket} <br />
+      <span class='shift'>
+        In my free time, I am continuously exploring areas of programming which
+        are unknown to me. I've played around with neural networks, computer
+        graphics, data visualisations, physics simulations, procedural art, web
+        dev, native windows applications, and networking to mention a few.
+        <br />
+        <br />
+        Coding is fun, coding something new even more so.
+      </span>
+    </p>
+  </TitledSection>
+)
 
 const rocket = (
   <svg

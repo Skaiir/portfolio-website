@@ -1,0 +1,50 @@
+@use '../abstracts/colors' as *;
+
+// TODO: improve parameter combinations (inverse selection?)
+
+.btn {
+  border: none;
+  margin: 5px;
+  padding: 8px;
+  color: $font-darker;
+  text-decoration: none;
+  background: $background-base;
+  border-radius: 4px;
+  box-shadow: 0 0 0 $background-base;
+  transition: all 0.1s;
+  font-size: 1rem;
+
+  &:hover {
+    background: $background-lighter;
+  }
+
+  &:active {
+    box-shadow: 0 0 0 $background-base;
+    transform: translate(0, 0);
+  }
+}
+
+.btn--bouncy:hover {
+  box-shadow: 2px 2px 0 $background-base;
+  transform: translate(-2px, -2px);
+
+  &:active {
+    box-shadow: 0 0 0 $background-base;
+    background-color: $font-highlight;
+    color: $background-darker;
+    transform: translate(0, 0);
+  }
+}
+
+.btn--keep-pressed {
+  &:focus {
+    box-shadow: 0 0 0 $background-base;
+    background-color: $font-highlight;
+    color: $background-darker;
+    transform: translate(0, 0);
+  }
+}
+
+.btn--tall {
+  padding: 20px 5px;
+}
