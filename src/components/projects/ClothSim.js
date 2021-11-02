@@ -1,5 +1,6 @@
-import PointNetworkFactory, { Vector2 } from '../../logic/point_network.js'
-import { drawNetwork } from '../../logic/canvasNetworkDrawer.js'
+import PointNetworkFactory from '../../logic/rkPointNetwork'
+import { Vector2 } from '../../logic/util/vectors'
+import { drawNetwork } from '../../logic/canvasRKNetworkDrawer.js'
 import React, { useRef, useState, useEffect } from 'react'
 
 const ClothSim = () => {

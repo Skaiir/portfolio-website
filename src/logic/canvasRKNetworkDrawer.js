@@ -1,4 +1,4 @@
-import { Vector2 } from './point_network'
+import { Vector2 } from './util/vectors'
 
 const mapToCanvasSize = (unitVector, canvas) => {
   const nv = new Vector2(

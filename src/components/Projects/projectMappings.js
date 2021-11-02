@@ -6,9 +6,11 @@ import portfolioImg from '../data/img/portfolio.png'
 import rayTracerImg from '../data/img/ray-tracer.png'
 import clockGameImg from '../data/img/clock-game.jpg'
 import ImgDisplay from './ImgDisplay'
+import ParticleSim from './ParticleSim'
 
 const calculatorName = 'calculator'
 const clothSimName = 'cloth-sim'
+const particleSimName = 'particle-sim'
 const thisName = 'this'
 const clockGameName = 'clock-game'
 const publicChatName = 'public-chat'
@@ -16,6 +18,7 @@ const rayTracerName = 'ray-tracer'
 
 export const projects = [
   clothSimName,
+  particleSimName,
   rayTracerName,
   calculatorName,
   thisName,
@@ -27,6 +30,10 @@ export const mapProject = (project) => {
   let info = null
 
   switch (project) {
+    case particleSimName:
+      proj = <ParticleSim />
+      break
+
     case calculatorName:
       proj = <Calculator />
       info = calculatorInfo
